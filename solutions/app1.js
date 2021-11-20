@@ -19,7 +19,7 @@ const getServerData = () => serverData;
  * @param {string} url a távoli erőforrás címe, ahonnan lekérjük az adatokat
  */
 const startFetch = (method = 'GET', url = '') => {
-    fetch(url, {method})
+    fetch(url, {method: method})
 /*     ezek mind átmennek a teszten:
     fetch(url)
     fetch(url, {method})

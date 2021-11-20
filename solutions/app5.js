@@ -1,6 +1,16 @@
 let productData = [];
 const getProductData = () => productData;
 
+/* const sortProducts = (products = [{ name: '' }]) => {
+    return products.sort((a, b) => {
+        if (a.name.toUpperCase() < b.name.toUpperCase()) { return -1; }
+        if (a.name.toUpperCase() > b.name.toUpperCase()) { return 1; }
+        return 0;
+    });
+}
+ */
+
+
 /**
  * Sorba rendezi a termékeket, és visszaadja a rendezett tömböt.
  * A rendezés alapja a name tulajdonság.
