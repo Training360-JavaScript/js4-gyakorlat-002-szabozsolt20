@@ -20,7 +20,11 @@ const getServerData = () => serverData;
  */
 const startFetch = (method = 'GET', url = '') => {
     fetch(url, {method})
-        .then(response => response.json())
+/*     ezek mind átmennek a teszten:
+    fetch(url)
+    fetch(url, {method})
+    fetch(url, {method:'GET'}) 
+ */        .then(response => response.json())
         .then(data => serverData = data)
         .catch(
             () => console.log(`Error: ${url} is not found!`),
