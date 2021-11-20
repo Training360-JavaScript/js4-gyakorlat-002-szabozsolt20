@@ -18,7 +18,7 @@ const getMovieData = () => movieData;
  * @param {string} url a távoli erőforrás címe, ahonnan lekérjük az adatokat
  */
 const getMovies = (url = '') => {
-    fetch(url)
+    fetch(url,{method: 'GET'})
         .then((data) => data.json())
         .then((data) => movieData=data)
         .catch(

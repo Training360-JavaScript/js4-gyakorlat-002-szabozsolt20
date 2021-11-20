@@ -19,7 +19,7 @@ const getUserData = () => userData;
  * @param {string} url a távoli erőforrás címe, ahonnan lekérjük az adatokat
  */
 const getUsers = (url = '') => {
-    fetch(url)
+    fetch(url,{method: 'GET'})
         .then(data => data.json())
         .then(data => userData = data)
         .catch(
