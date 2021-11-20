@@ -59,6 +59,6 @@ const getProducts = (url = '') => {
  * TODO: exportáld ki helyesen a getProducts függvényt!
  */
 export {
-
+    getProducts,
     getProductData,
 }
