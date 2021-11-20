@@ -9,8 +9,16 @@ const getProductData = () => productData;
  * @param {[{name: string}]} products termék objektumok tömbje
  * @returns {[{name: string}]} a name alapján rendezett tömb
  */
-const sortProducts = (products = [{ name: '' }]) => {
+const sortProducts = (products = [{name: ''}]) => {
     // itt dolgozz
+    return products.sort((a, b) => 
+        a.name.localeCompare(b.name)
+/*  {
+    if (a.name < b.name) return -1;
+        else return 1;
+        return 0
+    }
+ */    );
 };
 
 /**
@@ -38,11 +46,19 @@ const sortProducts = (products = [{ name: '' }]) => {
  * megfelelő hibaüzenetet a console.log segítségével.
  * @param {string} url a távoli erőforrás címe, ahonnan lekérjük az adatokat
  */
+const getProducts = (url = '') => {
+    fetch(url)
+        .then(data => data.json())
+        .then(data => productData = sortProducts(data))
+        .catch(
+            () => console.log(`Error: ${url} is not found!`),
+        );
 
+};
 /**
  * TODO: exportáld ki helyesen a getProducts függvényt!
  */
 export {
-    
+
     getProductData,
 }
