@@ -21,14 +21,23 @@ const getProductData = () => productData;
  */
 const sortProducts = (products = [{name: ''}]) => {
     // itt dolgozz
-    return products.sort((a, b) => 
+    return products.sort((a, b) =>
         a.name.localeCompare(b.name)
-/*  {
-    if (a.name < b.name) return -1;
-        else return 1;
-        return 0
-    }
- */    );
+        /*  {
+            if (a.name < b.name) return -1;
+                else return 1;
+                return 0
+            }
+        //vagy:
+            a < b ? return -1: return 1;
+            return 0;
+
+         {
+                if (a.name.toUpperCase() < b.name.toUpperCase()) { return -1; }
+                if (a.name.toUpperCase() > b.name.toUpperCase()) { return 1; }
+                return 0;
+         */
+    );
 };
 
 /**
